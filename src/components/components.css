@@ -1,0 +1,29 @@
+.count-up-memo {
+  padding: 32px;
+  background-color: rgba(218, 75, 218, 0.3);
+}
+
+.count-up-memo-child {
+  padding: 32px;
+  background-color: rgba(105, 11, 145, 0.3);
+}
+
+.count-up-useCallback {
+  padding: 32px;
+  background-color: rgba(98, 255, 0, 0.3);
+}
+
+.count-up-useCallback-child {
+  padding: 32px;
+  background-color: rgba(17, 93, 18, 0.3);
+}
+
+.count-up-useMemo {
+  padding: 32px;
+  background-color: rgba(0, 204, 255, 0.3);
+}
+
+.count-up-useMemo-child {
+  padding: 32px;
+  background-color: rgba(43, 69, 237, 0.3);
+}

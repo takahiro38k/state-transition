@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import CountUpMemo from "./components/CountUpMemo";
+import CountUpUseCallback from "./components/CountUpUseCallback";
+import CountUpUseMemo from "./components/CountUpUseMemo";
+
+const paths = {
+  basic: "/",
+  next: "/next",
+  next2: "/next2",
+};
 
 function App() {
+  console.log("App");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="App">
+          <nav>
+            <ul>
+              <li>
+                <Link to={paths.basic}>basic</Link>
+              </li>
+              <li>
+                <Link to={paths.next}>next</Link>
+              </li>
+              <li>
+                <Link to={paths.next2}>next2</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <h2>App</h2>
+
+          <Routes>
+            <Route path={paths.basic} element={<CountUpMemo />} />
+            <Route path={paths.next} element={<CountUpUseCallback />} />
+            <Route path={paths.next2} element={<CountUpUseMemo />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
