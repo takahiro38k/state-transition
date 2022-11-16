@@ -1,8 +1,6 @@
 import "./components.css";
 import { useState, memo } from "react";
 
-console.log("CountUp - outside");
-
 const CountUpMemo = () => {
   const [count, setCount] = useState(0);
 

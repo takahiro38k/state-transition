@@ -1,3 +1,8 @@
+.count-up {
+  padding: 32px;
+  background-color: rgba(194, 174, 121, 0.3);
+}
+
 .count-up-memo {
   padding: 32px;
   background-color: rgba(218, 75, 218, 0.3);

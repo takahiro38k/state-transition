@@ -1,14 +1,16 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import CountUp from "./components/CountUp";
 import CountUpMemo from "./components/CountUpMemo";
 import CountUpUseCallback from "./components/CountUpUseCallback";
 import CountUpUseMemo from "./components/CountUpUseMemo";
 
 const paths = {
-  basic: "/",
-  next: "/next",
-  next2: "/next2",
+  useState: "/",
+  memo: "/memo",
+  useCallback: "/useCallback",
+  useMemo: "/useMemo",
 };
 
 function App() {
@@ -21,13 +23,16 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to={paths.basic}>basic</Link>
+                <Link to={paths.useState}>useState</Link>
               </li>
               <li>
-                <Link to={paths.next}>next</Link>
+                <Link to={paths.memo}>memo</Link>
               </li>
               <li>
-                <Link to={paths.next2}>next2</Link>
+                <Link to={paths.useCallback}>useCallback</Link>
+              </li>
+              <li>
+                <Link to={paths.useMemo}>useMemo</Link>
               </li>
             </ul>
           </nav>
@@ -35,9 +40,10 @@ function App() {
           <h2>App</h2>
 
           <Routes>
-            <Route path={paths.basic} element={<CountUpMemo />} />
-            <Route path={paths.next} element={<CountUpUseCallback />} />
-            <Route path={paths.next2} element={<CountUpUseMemo />} />
+            <Route path={paths.useState} element={<CountUp />} />
+            <Route path={paths.memo} element={<CountUpMemo />} />
+            <Route path={paths.useCallback} element={<CountUpUseCallback />} />
+            <Route path={paths.useMemo} element={<CountUpUseMemo />} />
           </Routes>
         </div>
       </div>
