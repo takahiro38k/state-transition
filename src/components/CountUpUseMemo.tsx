@@ -28,7 +28,7 @@ const CountUpUseMemo = () => {
       <p>{count}</p>
       <p>×2 = {doubledCount()}</p>
       {/* 💡💡 useMemo */}
-      {/* <p>{doubledCount}</p> */}
+      {/* <p>×2 = {doubledCount}</p> */}
 
       <CountUpChild onClick={onClickChildCount} />
       <p>{childCount}</p>
